@@ -1,0 +1,330 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bob {
+    0%{
+        top:0;
+    }
+    50%{
+        top: 0.2em;
+    }   
+
+}
+
+.sky{
+    background: #53bfe0;
+    vertical-align:middle;
+    text-align: center;
+    transform: translate3d(0,0,0);
+    height: 50%;
+}
+
+.sky::before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+
+}
+
+.scene {
+    display: block;
+    vertical-align: middle;
+    margin-top: -3%;
+    margin-left: 0%;
+}
+
+.text{
+    color: white;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: -20%;
+    margin-top: 0%;
+    
+    
+}
+
+.sheep{
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    
+
+}
+
+.scene .top{
+    position: relative;
+    top:0;
+    animation: bob 1.5s infinite;
+}
+
+.sheep:hover .head{
+    transform: rotate(0deg);
+    transition-duration: 0.1s;
+}
+
+.sheep:hover .head .eye {
+    width:1.25em ;
+    height: 1.25em;
+
+}
+
+.sheep:hover .head .eye:before{
+    right:30%;
+}
+
+.sheep:hover .top{
+    animation-play-state: paused;
+}
+
+.sheep .head {
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 100%;
+    background: #211e21;
+    vertical-align: middle;
+    position: relative;
+    top: 1em;
+    transform: rotate(50deg);
+    
+}
+
+.sheep .head:before {
+    content: '';
+    display: inline-block;
+    width: 80%;
+    height: 50%;
+    background: #211e21;
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    border-radius: 50% 40%;
+
+}
+
+.sheep .head .eye {
+    display: inline-block;
+    width:1em;
+    height: 1em;
+    border-radius: 100%;
+    background: white;
+    position: absolute;
+    overflow: hidden;
+}
+
+.sheep .head .eye:before{
+    content: '';
+    display: inline-block;
+    background: black;
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    transition: all 0.3s;
+
+}
+
+.sheep .head .eye.one {
+    right: 0em;
+    top: 1.7em;
+}
+
+.sheep .head .eye.two {
+    right: 2.5em;
+    top: 1.7em;
+}
+
+.sheep .head .ear {
+    background: #211e21;
+    width: 50%;
+    height: 30%;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.sheep .head .ear.one {
+    left: -10%;
+    top: 5%;
+    transform: rotate(-30deg);
+}
+
+.sheep .head .ear.two{
+    top: 2%;
+    right: -5%;
+    transform: rotate(20deg);
+}
+
+.sheep .body{
+    display: inline-block;
+    width: 7em;
+    height: 7em;
+    border-radius: 100%;
+    background: white;
+    vertical-align: middle;
+    margin-right: 3em;
+
+}
+
+.sheep .legs {
+    display: inline-block;
+    position: absolute;
+    top: 84.5%;
+    left: 19%;
+    z-index: -1;
+
+}
+
+.sheep .legs .leg {
+    display: inline-block;
+    background: #141214;
+    width: 0.7em;
+    height: 2.5em;
+    margin: 0.5em;
+}
+
+.sheep::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 112%;
+    width: 100%;
+    height: 10%;
+    border-radius: 100%;
+    margin-left: -50%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.grass{
+    width: 100%;
+    height: 50%;
+    background: #59d959;
+    
+}
+
+.body::before{
+    content: '';
+    display: inline-block;
+    width: 7em;
+    height: 7em;
+    border-radius: 100%;
+    background: white;
+    vertical-align: middle;
+    margin-right: -3em;
+
+}
+.body::after{
+    content: '';
+    display: inline-block;
+    width: 7em;
+    height: 7em;
+    border-radius: 100%;
+    background: white;
+    vertical-align: middle;
+    margin-right: -12em;
+
+}
+
+ .dot{
+    display: inline-block;
+    background: black;
+    width: 10%;
+    height: 20%;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.a{
+    right: 80%;
+    bottom: -20%; 
+}
+.b{
+    right:150%;
+    bottom: 60%; 
+}
+.c{
+    right: 185%;
+    bottom: 10%; 
+}
+.d{
+    right: 160%;
+    bottom: -30%; 
+}
+.e{
+    right: 130%;
+    bottom: 10%; 
+}
+.f{
+    right: 110%;
+    bottom: -60%; 
+}
+.g{
+    right: 100%;
+    bottom: 50%; 
+}
+.speech-bubble {
+
+    position: relative;
+	background: #ffffff;
+    border-radius: .4em;
+    width: 0;
+    height: 0;
+    margin-left: 170%;
+    margin-top: -200%;
+    transition-duration: 1s;
+    
+    
+}
+
+
+.speech-bubble::after {
+	
+    border:0px;
+}
+.message{
+    font-size: 0px;
+}
+
+.sheep:hover .speech-bubble{
+    position: relative;
+	background: #ffffff;
+    border-radius: .4em;
+    width: 100px;
+    height: 95px;
+    margin-left: 170%;
+    margin-top: -200%;
+    transition-duration: 0.5s;
+    
+}
+.sheep:hover .speech-bubble::after{
+    content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	border: 25px solid transparent;
+	border-right-color: #ffffff;
+	border-left: 5;
+	border-bottom: 0;
+	margin-top: -10px;
+    margin-left: -50px;
+    transition-duration: 0.5s;
+    
+
+}
+.sheep:hover .message{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+   
+}
+
